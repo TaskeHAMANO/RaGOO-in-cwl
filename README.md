@@ -5,7 +5,7 @@ Wrapper tool of [RaGOO](https://github.com/malonge/RaGOO) by [CWL](https://githu
 
 * cwl-runner such as [cwltool](https://github.com/common-workflow-language/cwltool)
 * Docker
-    * If you cannot use docker, this tool runs with ```--no-container`` options.
+    * If you cannot use docker, this tool runs with ```--no-container``` options.
     * However, you have to install dependent tools of RaGOO, such as python3, intervaltree, numpy, and minimap2
 
 
