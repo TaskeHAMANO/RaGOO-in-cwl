@@ -1,4 +1,4 @@
-# RaGOO-in-docker
+# RaGOO-in-cwl
 Wrapper tool of [RaGOO](https://github.com/malonge/RaGOO) by [CWL](https://github.com/common-workflow-language/common-workflow-language) and [Docker](https://www.docker.com)
 
 ## Requirements
