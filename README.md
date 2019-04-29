@@ -11,11 +11,30 @@ Wrapper tool of [RaGOO](https://github.com/malonge/RaGOO) by [CWL](https://githu
 
 ## How to use
 
+With the [CWL reference implementation](https://github.com/common-workflow-language/cwltool/) (`cwltool`), [`toil-cwl-runner`](https://toil.readthedocs.io/en/latest/running/cwl.html), or [`arvados-cwl-runner`](https://dev.arvados.org/projects/arvados/wiki/Running_Common_Workflow_Language_%28CWL%29_workflows_on_Arvados) as your `cwl-runner`:
+
 ```
 cwl-runner --outdir ${PATH_TO_OUTPUT_DIR} \
            ragoo.cwl \
            --contigs_fasta ${PATH_TO_CONTIG_FILE} \
            --reference_fasta  ${PATH_TO_REFERENCE_FILE} \
+```
+
+For other runners an input object is required:
+> inputs.yml
+```
+contigs_fasta:
+  class: File
+  path: path/to/file
+reference_fasta:
+  class: File
+  path: path/to/other/file
+```
+
+```
+cwl-runner --outdir ${PATH_TO_OUTPUT_DIR} \
+           ragoo.cwl \
+           inputs.yml
 ```
 
 ## Note
