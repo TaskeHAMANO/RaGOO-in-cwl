@@ -41,8 +41,19 @@ inputs:
         inputBinding:
             position: 5
             prefix: "-b"
+    "misassembly_corr":
+        type: File?
+        inputBinding:
+            position: 11
+            prefix: "-R"
+    "type_read_misassembly":
+        type: string?
+        inputBinding:
+            position: 12
+            prefix: "-T"
     "threads":
         type: int?
+        default: 1
         inputBinding:
             position: 6
             prefix: "-t"
@@ -66,6 +77,11 @@ inputs:
         inputBinding:
             position: 10
             prefix: "-j"
+    "write_contigs":
+        type: boolean?
+        inputBinding:
+            position: 11
+            prefix: "-C"
 
 outputs:
     "out":
